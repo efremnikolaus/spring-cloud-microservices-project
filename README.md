@@ -1,5 +1,15 @@
 # Docker
 
+## Images
+
+- https://hub.docker.com/repositories/nikolai7
+- nikolai7/api-gateway:latest
+- nikolai7/currency-conversion-service:latest
+- nikolai7/currency-exchange-service:latest
+- nikolai7/naming-server:latest
+
+- openzipkin/zipkin:latest
+
 ## URLS
 
 #### Currency Exchange Service
@@ -23,7 +33,9 @@
 
 #### Commands
 ```
-docker-compose --version
+mvn clean install -DskipTests
+docker run -p 9411:9411 openzipkin/zipkin:latest
 docker-compose up
+docker-compose down
 watch -n 0.1 curl http://localhost:8000/sample-api
 ```
