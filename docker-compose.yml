@@ -39,7 +39,7 @@ services:
 
   naming-server:
     image: nikolai7/naming-server:latest
-    mem_limit: 700m
+    mem_limit: 800m
     ports:
       - "8761:8761"
     networks:
